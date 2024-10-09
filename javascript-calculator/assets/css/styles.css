@@ -1,0 +1,76 @@
+.img-jmbo{
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./../img/phot.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body{
+    background-color:#f2f2f2;
+}
+.card-img-top{
+    height: 200px;
+}
+.column-1 {
+    float: left;
+    width: 47%;
+    column-gap: 10%;
+    margin-left: 3%;
+   
+  }
+  .column {
+    float: left;
+    width: 47%;
+    margin-right:3%;
+    column-gap: 10%;
+   
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .nav{
+    background: rgba(25, 21, 21, 0);
+    position: fixed;
+    
+  }
+  .input{
+      background-color: #f2f2f2;
+  }
+  .bgimage {
+    width:100%;
+    height:750px;
+    background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./../img/phot.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+  .bgimage h1 {
+    padding-top: 300px;
+    font-size: 70px;
+    color:rgb(255, 255, 255);
+    text-shadow:2px 2px #333;
+    text-align: center;
+  }
+  .bgimage p {
+    padding: 20px;
+    color:rgb(255, 255, 255);
+    text-shadow:2px 2px #333;
+    text-align: center;
+  }
+  .form-group input{
+    background-color: #f2f2f2;
+  }
+  .form-group-depart select{
+    background-color: #f2f2f2;
+
+  }
+  .form-group textarea{
+    background-color: #f2f2f2;
+  }
+  .form-group-depart{
+    padding-top: 70px;
+
+  }

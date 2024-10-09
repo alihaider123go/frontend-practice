@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+.sign-btn{
+	background-color: hsl(180, 66%, 49%);
+	color: white !important;
+	padding: 10px 23px 10px 23px;
+
+}
+.log-btn{
+	color: hsl(0, 0%, 75%) !important;
+	padding: 10px 23px 10px 23px;
+
+}
+.navbar-btn a{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	text-decoration: none;
+	color: hsl(0, 0%, 75%);
+}
+.mob-menu{
+	background-color: hsl(257, 27%, 26%);
+	border-radius: 15px;
+	position: absolute;
+	top: 30px;
+	width: 87%;
+	left: 24px;
+}
+.mob-menu a{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	text-decoration: none;
+	color: white;
+	padding: 10px 85px 10px 85px;
+}
+#menu{
+	display: none;
+}
+.hero-heading{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+}
+.hero-text{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	color: hsl(0, 0%, 75%);
+	font size: 18px
+
+}
+.hero-btn{
+	background-color: hsl(180, 66%, 49%);
+	color: white !important;
+	border: none;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	padding: 10px 23px 10px 23px;
+
+}
+.hero-img{
+	background-image: url('../images/illustration-working.svg');
+	background-size: 117% 90%;
+	background-repeat: no-repeat;
+	height: 480px;
+	position: relative;
+	right: -97px;
+}
+.card-section{
+	background-color: #EFF1F7;
+}
+
+.search-card{
+	background-image: url('../images/bg-shorten-desktop.svg');
+	background-color: hsl(257, 27%, 26%);
+	padding-top: 35px;
+	padding-bottom: 35px;
+	position: relative;
+	top: -60px;
+	margin-top: 120px;
+
+
+}
+.search-btn{
+	background-color: hsl(180, 66%, 49%);
+	vertical-align: baseline;
+
+}
+.card-icon{
+	border-radius:50%;
+	background-color: hsl(257, 27%, 26%);
+	padding: 20px;
+	position: relative;
+	top: -40px;
+	left: 20px;
+}
+.card p{
+	font-size: 11px;
+	color: hsl(0, 0%, 75%);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+}
+.card{
+	border-radius: 13px;
+}
+.card h5{
+	
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+}
+.first-card{
+	height: 247px;
+}
+.second-card{
+	margin-top: 37.5px;
+	height: 247px
+}
+.thr-card{
+	margin-top: 75px;
+	height: 247px
+}
+hr:not([size]) {
+	position: absolute;
+	height: 7px;
+	top: 1030px;
+	width: 70%;
+	background-color: hsl(180, 66%, 49%);
+	opacity: 1;
+}
+
+.second-sec{
+	background-image: url('../images/bg-shorten-desktop.svg');
+	background-color: hsl(257, 27%, 26%);
+	padding-top: 35px;
+	padding-bottom: 35px;
+	top: -60px;
+	background-size: 107% 210%;
+}
+.footer{
+	background-color: black;
+}
+.footer a{
+	color: hsl(0, 0%, 75%);
+}
+.footer-logo{
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(45deg) brightness(102%) contrast(102%);
+}
+@media only  screen and  (max-width: 768px)  {
+	.hero-img{
+		position: relative;
+		width: 100%;
+		background-size: 140% 88%;
+		height: 360px;
+		right: -12px;
+	}
+}
+@media only  screen and  (max-width: 768px)  {
+	.thr-card{
+		margin-top: 70.5px;
+
+	}
+}
+@media only  screen and  (max-width: 768px)  {
+	.first-card{
+		margin-top: 70.5px;
+
+	}
+}
+@media only  screen and  (max-width: 768px)  {
+	.second-card{
+		margin-top: 70.5px;
+
+	}
+}
+@media only  screen and  (max-width: 768px)  {
+	.card-icon{
+		align-self: center;
+		left: 0px;
+	}
+}
+@media only  screen and  (max-width: 768px)  {
+
+	.vl {
+		border-left: 6px solid hsl(180, 66%, 49%);
+		height: 500px;
+		position: absolute;
+		left: 50%;
+		margin-left: -3px;
+		top: 1370px;
+	}
+}
+
+
+
+
+
+font-family: 'Poppins', sans-serif; 500 700

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+.head-sec{
+	background-image: url('../images/bg-hero-desktop.svg') ;
+	background-color: hsl(193, 100%, 96%);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.head-btn{
+	background-color: white;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	box-shadow: -2px 0px 9px -2px rgba(0,0,0,0.59);
+}
+.hero-btn{
+	background-color: hsl(322, 100%, 66%);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	color: white;
+}
+.hero-text h2{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+.hero-text p{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.footer{
+	background-color: hsl(192, 100%, 9%);
+	margin-top: 150px;
+	position: relative;
+	z-index: -1;
+}
+.footer a{
+	color: white;
+	text-decoration: none;
+}
+.footer li{
+	list-style: none;
+}
+.footer-logo{
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+	width: 150px;
+	height: 24px;
+}
+.social-ico{
+	margin-top: 0px;
+}
+.mini-card{
+	position: absolute;
+	top: -120px;
+
+
+
+}
+.card{
+	border-radius: 12px;
+	border: none;
+	box-shadow: -2px 0px 9px -2px rgba(0,0,0,0.59);
+}
+@media only  screen and (max-width: 768px)  {
+	.mini-card{
+		width: 90%;
+		position: absolute;
+		top: -250px;
+		margin-top: 190px;
+	}	
+
+}
+@media only  screen and (max-width: 768px)  {
+.card{
+	text-align: center;
+}
+}
+@media only  screen and (max-width: 768px)  {
+.hero-text{
+	text-align: center;
+}
+}
+@media only  screen and (max-width: 768px)  {
+.footer-item{
+	display: block !important;
+	margin-top: 40px;
+}
+}
+@media only  screen and (max-width: 768px)  {
+.social-ico{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}}
+@media only  screen and (max-width: 768px)  {
+.footer-logo{
+	margin-bottom: 10px;
+}}
+
+font-family: 'Poppins', sans-serif; 600
+400, 700 font-family: 'Open Sans', sans-serif;

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+/*     .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+</style>
+</head>
+<body>
+  <div class="container-fluid px-0">
+    <div class="container">
+
+      <!-- Navbar-desktop -->
+      <div class="d-flex justify-content-between navbar-btn align-items-center my-3">
+        <a class="" href="#"><img src="images/logo.svg"></a>
+        <div class=" d-flex me-auto d-none d-md-block d-lg-block">
+          <a class=" me-3 ms-3" aria-current="page" href="#">Features</a>
+          <a class=" me-3" href="#">Pricing</a>
+          <a class="" href="#">Resources</a>
+        </div>
+        <div class="d-flex d-none d-md-block d-lg-block">
+          <a class="rounded-pill log-btn px-3 bg-transparent" href="#">Login</a>
+          <a class="rounded-pill sign-btn px-3" href="#">Sign Up</a>
+        </div>
+        <div class="">
+          <button class="btn btn-default d-md-none d-sm-block" onclick="toggleMenu()"><span class="" aria-hidden="true"><i class="fas fa-bars"></i></span></button>
+        </div>
+      </div>
+      <!-- Hero -->
+      <div class="banner-top d-flex flex-lg-row flex-column-reverse justify-content-center align-items-center">
+        <div class="col-lg-6 hero-area text-lg-start text-center">
+          <h1 class="hero-heading">More then just shorter Links</h1>
+          <p class="hero-text">Build your brand's recognitions and get details <br> insights on how your links are preforming.</p>
+          <button class="rounded-pill hero-btn">Get Started</button>
+        </div>
+        <div class="col-lg-6 hero-img">
+        </div>
+      </div>
+
+      <!-- Navbar-Mobile -->
+      <div id="menu" class="text-center mob-menu  align-items-center my-4 py-5 px-2">
+        <a class="btn rounded-pill" aria-current="page" href="#">Features</a>
+        <a class="btn rounded-pill" href="#">Pricing</a>
+        <a class="btn rounded-pill" href="#">Resources</a>
+        <hr class="bg-light">
+        <a class="rounded-pill bg-transparent mb-4" href="#">Login</a>
+        <a class="rounded-pill sign-btn" href="#">Sign Up</a>
+      </div>
+    </div>
+    <div class="container-fluid card-section pb-2">
+      <div class="container">
+
+        <!-- Search -->
+        <div class="card px-2 mx-auto search-card">
+          <form class="text-center">
+            <input class="form-control d-inline me-2 w-75" type="search" placeholder="Shorton a link here..." aria-label="Search">
+            <button class="search-btn btn text-white mt-lg-0 mt-3" type="submit">Shorton It!</button>
+          </form>
+        </div>
+        <div class="px-5 mx-auto text-center">
+          <h3>Advanced Statistics</h3>
+          <p>Track how your  Links are Performing Across the web with our advanced statistics dashboard.</p>
+        </div>
+
+        <!-- card -->
+        <div class="d-lg-flex mx-auto mt-5">
+         <hr class="d-lg-block d-none">
+         <div class="vl d-lg-none"></div>
+         <!-- 1st Card -->
+         <div class="card me-lg-4 first-card">
+          <img class="card-icon" src="images/icon-brand-recognition.svg" alt="" width="80px">
+          <div class="px-4">
+            <h5>Brand Recognition</h5>
+            <p>Boost your brand recognition with each click. Generic link don't mean a thing. Branded  links help install confedance in your content.</p>
+          </div>
+        </div>
+
+        <!-- second Card -->
+        <div class="card me-lg-4 second-card">
+          <img class="card-icon" src="images/icon-detailed-records.svg" alt="" width="80px">
+          <div class="px-4">
+            <h5>Details Records</h5>
+            <p>Boost your brand recognition with each click. Generic link don't mean a thing. Branded  links help install confedance in your content.</p>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="card thr-card">
+          <img class="card-icon" src="images/icon-fully-customizable.svg" alt="" width="80px">
+          <div class="px-4">
+            <h5>Fully Customizable</h5>
+            <p>Boost your brand recognition with each click. Generic link don't mean a thing. Branded  links help install confedance in your content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid second-sec">
+  <div class="d-flex flex-column align-items-center">
+    <h2 class="text-white">Boost your links today</h2>
+    <button class="rounded-pill hero-btn mt-3">Get Started</button>
+  </div>
+</div>
+<!-- Footer -->
+<div class="container-fluid footer">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <a class="" href="#"><img class="footer-logo" src="images/logo.svg"></a>
+      </div>
+      <div class="col-lg-4 d-lg-flex justify-content-lg-around px-0">
+       <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link Shortning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Btanded Links</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Analytics</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold" href="#">Resourses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Developer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Support</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold" href="#">Company</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-4 text-center">
+      <a class="me-3" href="#"><img src="images/icon-facebook.svg"></a>
+      <a class="me-3" href="#"><img src="images/icon-twitter.svg"></a>
+      <a class="me-3" href="#"><img src="images/icon-pinterest.svg"></a>
+      <a class="" href="#"><img src="images/icon-instagram.svg"></a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<script>
+ function toggleMenu(){
+
+
+   if(document.getElementById('menu').style.display == 'none'){
+     document.getElementById('menu').style.display = 'inline-grid';
+   }
+   else{
+     document.getElementById('menu').style.display = 'none';
+   }
+ }
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

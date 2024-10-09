@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript"></script>
+	<title>3rd.Vue</title>
+	<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		
+		<ul>
+			<li v-for="name in names" v-text='name'></li>
+		</ul>
+		<input type="text" id="input">
+		<button type="button" id="button">add me</button>
+
+	</div>
+
+	<script>
+
+		var app = new Vue({
+			el: '#root',
+			data: {
+				names: ['Irfan','Aamir','Amjad','jon']
+			},
+
+			mounted(){
+				document.querySelector('#button').addEventListener('click', ()=>{		//event listner
+					let name = document.querySelector('#input');						//dive in dom FEATCH VALUE
+					app.names.push(name.value);											//PUSH NAME
+					name.value = '';
+				})
+			}
+
+		})
+
+	</script>
+
+</body>
+</html>

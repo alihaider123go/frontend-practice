@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript"></script>
+	<title>4th.Vue</title>
+	<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		
+		<ul>
+			<li v-for="name in names" v-text="name"></li>
+		</ul>
+		<input type ="text" id ="input" v-model = 'newName'>
+		<button type ="button" @click ="addName">add me</button>
+
+	</div>
+
+	<script>
+
+		new Vue({																						//vue instance
+			el: '#root',																			//wo div ka id jis main kam ho rha hy
+			data: {																						//data 
+
+				newName: '',
+
+				names: ['Irfan','Aamir','Amjad','jon']					//arry
+			},
+			
+			methods: {
+
+			addName	() {																			//function
+					this.names.push(this.newName); 
+					this.newName = '';
+
+				}
+			}
+		})
+
+	</script>
+
+</body>
+</html>

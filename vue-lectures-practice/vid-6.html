@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript"></script>
+	<title>6th.Vue</title>
+	<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+
+<body>
+	<div id="root">
+		<h1>All tasks</h1>
+	<ul>
+		<li v-for='task in tasks' v-text='task.description'>
+			
+		</li>
+	</ul>
+
+
+	</div>
+
+
+<script>
+	new Vue({
+
+		el: '#root',
+
+
+		data:{
+
+			tasks:[
+
+			{description: 'Go to the store', comleted: true},
+			{description: 'Finish Screen cast', comleted: true},
+			{description: 'Make donation', comleted: false},
+			{description: 'Clear Inbox', comleted: true},
+			{description: 'Make dinner', comleted: false},
+			{description: 'Crean room', comleted: false},
+
+			]
+		},
+	
+	})
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

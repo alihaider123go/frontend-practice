@@ -1,0 +1,234 @@
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<title>Bootstrap-table</title>
+
+	<style>
+	.table {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.no-outline {
+		border: none;
+		width: 20px;
+	}
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+			aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarScroll">
+			<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll w-100" style="--bs-scroll-height: 100px;">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+				</li>
+				<li class="nav-item dropdown" style="margin-left:auto;">
+					<a class="nav-link dropdown-toggle" href="about.html" id="navbarScrollingDropdown" role="button"
+					data-bs-toggle="dropdown">
+					Projects
+				</a>
+				<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
+					<li><a class="dropdown-item" href="table.html">Bootstrap Table</a></li>
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="Calculator.html">calculator</a></li>
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="task.html">Newtask</a></li>
+				</ul>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="about.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+				</li>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<div class="cantainer" id="textname"></div>
+<h2 class="text-center">Bootstrap Table</h2>
+<div class="input-table">
+	<td><input type="id" id="user_id" placeholder="userid">
+		<input type="name" placeholder="name" id="user_name">
+		<input type="email" id="em_email" name="email" placeholder="email">
+		<input type="name" placeholder="designation" id="user_designation">
+		<button type="submit" class="btn btn-primary" onclick="addRecord();">add</button>
+	</div>
+
+	<table id="dataTable" class="table order-list">
+
+		<thead class="table-dark">
+			<tr>
+				<th>UserID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Designation</th>
+			</tr>
+		</thead>
+		<tr>
+
+		</tr>
+		<tbody id="tboid">
+
+		</tbody>
+	</table>
+
+	<div class="contaner" style="height: 300px;"></div>
+	<div class="bg-transparent text-center mb-5 pb-5">&copy; Untitled Design: <a
+		href="https://templated.co/">TEMPLATED</a>.
+		Images <a href="https://unsplash.com/">Unsplash</a>. Video <a href="http://coverr.co/">Coverr</a>.
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+crossorigin="anonymous"></script>
+</body>
+
+
+<script>
+	//make arry
+	var numberList = [
+	{ id: 1, name: "amjad", email: 	"hafizaamir786@gmail.com", designation: "Technician" },
+	{ id: 2, name: "adnan", email: 	"aamir786@gmail.com", designation: "Analyst" },
+	{ id: 3, name: "irfan", email: 	"hafiz786@gmail.com", designation: "Consultant" },
+	{ id: 4, name: "asif",  email: 	"afimir786@gmail.com", designation: "Accountant" },
+	{ id: 5, name: "shahzad", email: "izaamisss786@gmail.com", designation: "Teacher" },
+	{ id: 6, name: "Tariq", email: 	"fizaaqwe86@gmail.com", designation: "Watchman" },
+	{ id: 7, name: "Hussai", email: "izaamir786@gmail.com", designation: "Global Managemen" },
+	];
+
+	printTable();
+
+	// valid mail
+	function validateEmail(emailElement)					//in brackets  (parameters)
+	{
+		var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;	//regular expression
+
+		var emailText = emailElement.value;
+
+		if(emailText.match(mailformat))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+	//enter value must
+	function addRecord() {
+		var usid = document.getElementById('user_id').value;
+
+		var usna = document.getElementById('user_name').value;
+
+		var usem = document.getElementById('em_email'). value;
+
+		var usde = document.getElementById('user_designation').value;
+
+		if (usid == 0 || usna == 0 || usem == 0 || usde == 0) {
+			alert('all fields are required');
+			return
+		}
+
+		//valid email id part2nd
+		var myElement = document.getElementById('em_email');
+
+		var isValidEmail = validateEmail(myElement);
+
+		if (isValidEmail == true) {
+
+				alert("Valid email address!");
+		}
+		else {
+
+			alert("You have entered an invalid email address!");
+
+			return
+		}
+
+
+
+		//console.log(usid + ' ' + usna + ' ' + usem + ' ' + usde);
+//push arry in single record
+		var singleRecord = { id: usid, name: usna, email: usem, designation: usde };
+
+		//console.log(singleRecord);
+
+		numberList.push(singleRecord);
+
+		removeTable();					//function call
+
+		printTable();					//function call
+
+
+	//console.log(numberList);
+	}
+//function for remove table
+	function removeTable() {
+
+		var t_body = document.getElementById('tboid');
+
+		t_body.innerHTML = '';
+	}
+	//function for print table
+	function printTable() {
+
+		for (var i = 0; i < numberList.length; i++) {
+
+			var idtr = document.createElement("tr");
+
+			var idtd = document.createElement("td");
+
+			var natd = document.createElement("td");
+
+			var emtd = document.createElement("td");
+
+			var detd = document.createElement("td");
+
+			idtd.innerHTML = numberList[i]['id'];
+
+			natd.innerHTML = numberList[i]['name'];
+
+			emtd.innerHTML = numberList[i]['email'];
+
+			detd.innerHTML = numberList[i]['designation'];
+
+			idtr.appendChild(idtd);
+
+			idtr.appendChild(natd);
+
+			idtr.appendChild(emtd);
+
+			idtr.appendChild(detd);
+
+			document.getElementById('tboid').appendChild(idtr);				//function get and append
+		}
+
+	}
+
+</script>
+
+</html>

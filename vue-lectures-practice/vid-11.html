@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript"></script>
+    <title>10-th.Vue</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div id="root" class="container">
+        <tabs>
+            <tab name="About us"  :selected="true">
+                <h1>Here Is the Content for the about our culture tab.</h1>
+            </tab>
+            <tab name="About Culture">
+                <h1>Here Is the Content for the about our culture tab.</h1>
+            </tab>
+            <tab name="About Visitor">
+                <h1>Here Is the Content for the about our culture tab.</h1>
+            </tab>
+        </tabs>
+
+        
+
+    </div>
+
+
+
+    <script>
+        Vue.component('tabs',{
+            template: `
+            <div>
+            <div class="tabs">
+            <ul>
+            <li class="is-active"><a>Pictures</a></li>
+            <li><a>Music</a></li>
+            <li><a>Videos</a></li>
+            <li><a>Documents</a></li>
+            </ul>
+            </div>
+            </div>
+
+            `,
+
+            mounted(){
+
+            }
+        });
+        Vue.component('tab', {
+            template: `
+            <div><slot></slot></div>
+            `
+        })
+
+        new Vue({
+            el: '#root'
+        })
+
+    </script>
+
+</body>
+</html>

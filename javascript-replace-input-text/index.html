@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function inpchange() {
+
+			var input_value = document.getElementById('fullname').value;
+
+			var temp = document.getElementById('result_text').innerHTML;
+
+			var newtx = temp + "&nbsp" + input_value;
+
+			document.getElementById('result_text').innerHTML = newtx;
+
+		}
+	</script>
+</head>
+<body>
+	<h2>Input Field</h2>
+	<div id="result_text"></div>
+  <label for="fullname">Name:</label>
+  <input type="text" id="fullname" name="fname" value="">
+
+
+
+
+  <button type="button" onclick="inpchange()">Print</button>
+  	
+	
+</body>
+</html>

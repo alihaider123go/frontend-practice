@@ -1,0 +1,213 @@
+   @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+   .btn-grad {background-image: linear-gradient(to right, #31D06A 0%, #56B4D3  51%, #2BB9CF  100%)}
+   .btn-grad {
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;         
+}
+
+#navbarText ul li a{
+   font-family: 'Public Sans', sans-serif;
+   font-weight: 400; 
+   color: hsl(233, 8%, 62%);
+
+
+}
+body{
+    overflow-x: hidden;
+}
+#navbarText ul{
+    margin-left: auto ;
+}
+.navbar-light .navbar-toggler {
+    border-color: rgba(0,0,0,0);
+}
+#closeSign{
+    display: none;
+}
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+.intrbag{
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-color: #FAFAFA;
+    background-position:1350% 55%; 
+    height: 555px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+}
+.intotext{
+    margin-top: 130px;
+    margin-left: 40;
+
+}
+.imagepost{
+   position: absolute;
+   top: -100px;
+   right: -104px;
+}
+.navbar-position{
+    z-index: 1;
+}
+.section-center{
+    background-color: hsl(220, 16%, 96%);
+    position: relative;
+    z-index: -2;
+
+}
+.section-center h4{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400; 
+}
+.section-center p{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400; 
+    color: hsl(233, 8%, 62%);
+
+}
+.section-center h4{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400; 
+}
+.section-center h3{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400; 
+
+}
+.articalsection{
+    background-color: #FAFAFA;
+
+}
+.card-title{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400; 
+
+}
+.card-text{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400; 
+    color: hsl(233, 8%, 62%);
+    font-size: 14px;
+
+}
+.footer-sty{
+    background-color: #2D314E;
+}
+.footer-sty a{
+    color: hsl(233, 8%, 62%);
+
+}
+.card{
+    border: none;
+}
+
+.footer-logo{
+    filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(237deg);
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+   #navbarText ul li a{
+       font-family: 'Public Sans', sans-serif;
+       font-weight: 300; 
+       color: black;
+   }
+   @media only screen and (max-width: 768px) {
+       #navbarText ul{
+           box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.72);
+           border-radius: 6px;
+       }
+       @media only screen and (max-width: 768px) {
+           body{
+             text-align: center;
+         }
+         @media only screen and (max-width: 768px) {
+           .intotext{
+               position: absolute;
+               top: 200px;
+               width: 340px;
+               left: 0px;
+           }
+         @media only screen and (max-width: 768px) {
+           .imagepost{
+               position: absolute;
+               top: -110px;
+               width: 330px;
+               left: 0px;
+               width: 100%;
+           }
+       }
+       @media only screen and (max-width: 768px) {
+           .intrbag{
+            background-image: url("../images/bg-intro-mobile.svg");
+            background-color: #FAFAFA;
+            width: 100%;
+            background-position:0% -50%; 
+            height: 550px;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: -1;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  font-family: 'Public Sans', sans-serif;

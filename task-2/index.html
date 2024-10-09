@@ -1,0 +1,74 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>12th.Vue</title>
+	<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+h3, a, heading-css{
+	color: black;
+	text-decoration: none;
+	font-family: rubik;
+	font-size: 20px;
+}
+p{
+	font-family: rubik;
+	font-size: 13px;
+
+
+}
+label{
+	font-family: rubik;
+	font-size: 13px;
+}
+</style>
+
+
+<body class="mt-5 bg-gray">
+
+
+
+
+
+
+	<div id="root"class="container">
+		<div class="row w-100">
+			<div class="col-lg-8">
+				<div class="row w-100">
+
+
+					<post v-for="singlePost in postList"   :title="singlePost.title"  :author="singlePost.author"  :body="singlePost.body"  :category="singlePost.category" >	</post>
+
+				</div>
+
+				
+			</div>
+			<forrm @submited="addPost"></forrm>
+			
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	
+
+	<script  src="post-com.js">  </script>
+	<script  src="form-com.js">  </script>
+	<script  src="main.js">  </script>
+
+</body>
+</html>

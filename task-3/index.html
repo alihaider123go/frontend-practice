@@ -1,0 +1,160 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+		<img src="tecxra.ico">
+		<title>Vue-task3</title>
+	</head>
+	<body class="bg-secondary">
+		<div id="root" class="m-5">
+			
+			<!-- Form -->
+			<div class="container">
+				<div class="row">
+
+
+					<inputform  @inputdata="getStudentsData" :id='postId'></inputform>
+
+
+
+					<!-- Post show -->
+					<div class="card col m-3">
+
+
+
+
+						<postshow @submitcounter="likecounter"  @discounter="dislikecounter":title='vtitle':category='vcategory' :message='vmessage' :id='postId' :dlike='postDislike':likes="postLikes" :detid='newId' ></postshow>
+
+
+
+					</div>
+
+
+
+					<div class="card col m-3">
+
+
+
+						<postupdate @submitupdated="getUpdatedData"  :title='vtitle':category='vcategory' :message='vmessage' :detid='newId'></postupdate>
+
+
+
+
+					</div>
+				</div>
+				
+				
+			</div>
+
+			<!-- Table -->
+			<div class="container my-5">
+
+
+
+				<listitem  :list='listData' @sentdata="sentdata"></listitem>
+
+
+
+			</div>
+		</div>
+
+		<!-- script -->
+		<script src="component-show.js"></script>
+		<script src="component-reg.js"></script>
+		<script src="component-list.js"></script>
+		<script src="likebtn.js"></script>
+		<script src="component-update.js"></script>
+		<script>
+			
+			new Vue ({
+				el: '#root',
+				data(){
+					return{
+						vcategory: '',
+						vtitle: '',
+						vmessage: '',
+						postId: '',
+						postLikes:'',
+						postDislike:'',
+						newId: '',
+
+
+						listData:[
+						{id:'0', title:'hello', category:'world', message:'asif', number: 0, dlike: 0,},
+						
+
+						]
+					};
+				},
+
+				methods:{
+
+					sentdata(item){
+						
+						this.vtitle = item.item.title;
+						this.vcategory = item.item.category;
+						this.vmessage = item.item.message;
+						this.postLikes = item.item.number;
+						this.postDislike = item.item.dlike;	
+						this.newId = item.id;
+
+					},
+
+					getStudentsData(regData){
+
+							this.remRow = this.listData.length
+
+
+							// console.log(this.listData.length);
+							regData.id = Math.floor(1000 + Math.random() * 9000);
+							console.log(regData.id);
+							this.listData.push(regData);
+							this.postId = regData.id;
+							alert(this.postId);
+
+
+						},	
+
+						likecounter(counterObj){
+
+
+							for (var i = 0; i < this.listData.length; i++) {
+								if(this.listData[i].id == counterObj.id){
+									this.listData[i].number = counterObj.likebutton;
+								}
+							}
+						},
+
+
+						dislikecounter(dlikedata){
+							for (var i = 0; i < this.listData.length; i++) {
+								if(this.listData[i].id == dlikedata.id){
+									this.listData[i].dlike = dlikedata.dlikebutton;
+								}
+							}
+						},
+
+						getUpdatedData(editData){
+							for (var i = 0; i < this.listData.length; i++) {
+								if(this.listData[i].id == editData.id){
+									this.listData[i].title = editData.title;
+									this.listData[i].category = editData.category;
+									this.listData[i].message = editData.message;
+
+								}
+							}
+						}
+					},
+
+
+				});
+
+			</script>
+		</body>
+		</html>
